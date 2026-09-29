@@ -101,3 +101,9 @@ input:focus,select:focus,textarea:focus{outline:none;border-color:var(--g);box-s
 .hero-logo{width:84px;height:84px;object-fit:contain;background:#fff;border-radius:50%;padding:4px;margin-bottom:14px;box-shadow:var(--sh)}
 .signboard{padding-bottom:30px}.signboard img{width:100%;border-radius:var(--r);box-shadow:var(--sh)}
 .modal-logo{width:64px;height:64px;object-fit:contain;margin:0 auto 6px}
+@media print{
+ .nav,.hero-overlay,.arrow,.dots,#toTop,.burger{display:none!important}
+ body{color:#000;background:#fff}
+ .section{padding:20px 0}
+ .card{box-shadow:none;border:1px solid #ccc}
+}
