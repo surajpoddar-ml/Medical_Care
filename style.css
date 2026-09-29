@@ -72,10 +72,16 @@ input:focus,select:focus,textarea:focus{outline:none;border-color:var(--g);box-s
 .clist i{width:42px;height:42px;flex:none;border-radius:50%;background:#fff;color:var(--g);display:grid;place-items:center;box-shadow:0 2px 8px rgba(0,0,0,.06);font-size:1.1rem}
 .clist a{color:var(--g);font-weight:600;transition:color .2s ease}.clist a:hover{color:var(--gd)}
 .map{border-radius:var(--r);overflow:hidden;min-height:340px;box-shadow:var(--sh)}.map iframe{width:100%;height:100%;min-height:340px;border:0}
-.footer{background:var(--gx);color:#cfe3d8;padding-top:56px}.fgrid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.3fr;gap:34px}
-.footer h4{color:#fff;margin-bottom:12px}.footer a,.footer span{display:block;margin-bottom:6px;font-size:.92rem}.footer a:hover{color:#fff}
-.footer p{margin:14px 0}.social{display:flex;gap:10px}.social a{width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.1);display:grid;place-items:center;margin:0}.social a:hover{background:var(--g)}
-.copy{text-align:center;border-top:1px solid rgba(255,255,255,.12);margin-top:40px;padding:18px;font-size:.85rem}
+.footer{background:var(--gx);color:#cfe3d8;padding-top:56px}
+.fgrid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.3fr;gap:34px}
+.footer h4{color:#fff;margin-bottom:12px;font-size:1.05rem}
+.footer a,.footer span{display:block;margin-bottom:6px;font-size:.92rem;transition:color .2s ease}
+.footer a:hover{color:#fff}
+.footer p{margin:14px 0;line-height:1.6}
+.social{display:flex;gap:10px}
+.social a{width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.1);display:grid;place-items:center;margin:0;transition:background .25s ease,transform .25s ease}
+.social a:hover{background:var(--g);transform:translateY(-2px)}
+.copy{text-align:center;border-top:1px solid rgba(255,255,255,.12);margin-top:40px;padding:18px;font-size:.85rem;color:#a8c4b5}
 .modal{position:fixed;inset:0;background:rgba(0,0,0,.55);display:grid;place-items:center;z-index:100;padding:20px}.modal[hidden]{display:none}
 .modal-box{background:#fff;border-radius:var(--r);padding:34px;max-width:420px;text-align:center;animation:pop .3s}.modal-box i{font-size:3rem;color:var(--g)}.modal-box p{margin:10px 0 20px;color:var(--gray)}
 @keyframes pop{from{transform:scale(.85);opacity:0}}
