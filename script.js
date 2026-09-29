@@ -42,10 +42,12 @@ const cObs=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)retu
 $$('[data-count]').forEach(el=>cObs.observe(el));
 
 const modal=$('#modal');
-function showModal(title,msg){$('#mt').textContent=title;$('#mp').textContent=msg;modal.hidden=false;$('#mclose').focus()}
-$('#mclose').onclick=()=>modal.hidden=true;
-modal.onclick=e=>{if(e.target===modal)modal.hidden=true};
-addEventListener('keydown',e=>{if(e.key==='Escape')modal.hidden=true});
+let lastFocusedElement=null;
+function showModal(title,msg){lastFocusedElement=document.activeElement;$('#mt').textContent=title;$('#mp').textContent=msg;modal.hidden=false;$('#mclose').focus()}
+function closeModal(){modal.hidden=true;if(lastFocusedElement)lastFocusedElement.focus()}
+$('#mclose').onclick=closeModal;
+modal.onclick=e=>{if(e.target===modal)closeModal()};
+addEventListener('keydown',e=>{if(e.key==='Escape'&&!modal.hidden)closeModal()});
 
 function validate(form){let ok=true;
  form.querySelectorAll('[required]').forEach(f=>{const bad=!f.value.trim()||(f.pattern&&!new RegExp('^'+f.pattern+'$').test(f.value));f.classList.toggle('invalid',bad);if(bad)ok=false});
