@@ -38,7 +38,7 @@ $$('.reveal').forEach(el=>rv.observe(el));
 const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
 const cObs=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;cObs.unobserve(e.target);
  const el=e.target,end=+el.dataset.count,suf=el.dataset.suffix||'',t0=performance.now();
- const step=t=>{const p=reduce?1:Math.min((t-t0)/1600,1);el.textContent=Math.floor(end*p).toLocaleString()+(p===1?suf:'');if(p<1)requestAnimationFrame(step)};requestAnimationFrame(step)}),{threshold:.5});
+ const step=t=>{const progress=reduce?1:Math.min((t-t0)/1400,1);const ease=1-Math.pow(1-progress,3);el.textContent=Math.floor(end*ease).toLocaleString()+(ease>=1?suf:'');if(progress<1)requestAnimationFrame(step)};requestAnimationFrame(step)}),{threshold:.4});
 $$('[data-count]').forEach(el=>cObs.observe(el));
 
 const modal=$('#modal');
