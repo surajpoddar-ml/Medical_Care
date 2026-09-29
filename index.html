@@ -97,9 +97,9 @@
 <section class="section appt" id="appointment"><div class="container appt-in">
   <div class="reveal"><span class="eyebrow light">Easy booking</span><h2>Book Your Appointment</h2><p>Fill in the form and our support team will confirm your slot by phone.</p><p><i class="fa-solid fa-phone"></i> 021-517777</p></div>
   <form id="apptForm" class="form reveal" novalidate>
-    <label>Patient Name*<input name="name" required></label>
-    <label>Phone Number*<input name="phone" type="tel" required pattern="[0-9+\- ]{7,15}"></label>
-    <label>Email<input name="email" type="email"></label>
+    <label>Patient Name*<input name="name" autocomplete="name" required></label>
+    <label>Phone Number*<input name="phone" type="tel" autocomplete="tel" required pattern="[0-9+\- ]{7,15}"></label>
+    <label>Email<input name="email" type="email" autocomplete="email"></label>
     <label>Department*<select name="dept" id="fDept" required><option value="">Select department</option></select></label>
     <label>Doctor<select name="doctor" id="fDoc"><option value="">Any available doctor</option></select></label>
     <label>Preferred Date*<input name="date" type="date" id="fDate" required></label>
