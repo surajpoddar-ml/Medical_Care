@@ -30,7 +30,7 @@ h1,h2,h3{line-height:1.2}h2{font-size:clamp(1.7rem,3vw,2.4rem);margin-bottom:14p
 @keyframes kb{from{transform:scale(1)}to{transform:scale(1.1)}}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(4,40,26,.88),rgba(4,40,26,.5) 60%,rgba(4,40,26,.25))}
 .hero-in{position:relative;height:100%;display:flex;align-items:center;justify-content:space-between;gap:30px}
-.hero-text{max-width:620px}.hero h1{font-size:clamp(2.1rem,5vw,3.7rem);margin:14px 0}.hero p{font-size:1.1rem;margin-bottom:26px;opacity:.95}
+.hero-text{max-width:620px}.hero h1{font-size:clamp(2.1rem,5vw,3.7rem);line-height:1.15;letter-spacing:-.02em;margin:14px 0}.hero p{font-size:1.1rem;line-height:1.65;margin-bottom:26px;opacity:.95}
 .chip{background:rgba(255,255,255,.16);padding:6px 14px;border-radius:999px;font-size:.85rem}
 .em-card{background:#fff;color:var(--gx);padding:16px 22px;border-radius:var(--r);display:flex;gap:14px;align-items:center;box-shadow:var(--sh);align-self:flex-end;margin-bottom:60px}
 .em-card i{font-size:1.6rem;color:var(--red)}.em-card b,.em-card span{display:block}.em-card span{color:var(--gray);font-size:.9rem}
