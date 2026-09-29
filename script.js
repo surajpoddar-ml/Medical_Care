@@ -25,6 +25,7 @@ go(0);auto();
 const menu=$('#menu'),burger=$('#burger');
 burger.onclick=()=>{const o=menu.classList.toggle('open');burger.setAttribute('aria-expanded',o)};
 $$('#menu a').forEach(a=>a.onclick=()=>{menu.classList.remove('open');burger.setAttribute('aria-expanded',false)});
+addEventListener('keydown',e=>{if(e.key==='Escape'&&menu.classList.contains('open')){menu.classList.remove('open');burger.setAttribute('aria-expanded',false);burger.focus()}});
 addEventListener('scroll',()=>{$('#navbar').classList.toggle('scrolled',scrollY>40);$('#toTop').classList.toggle('show',scrollY>500)},{passive:true});
 $('#toTop').onclick=()=>scrollTo({top:0,behavior:'smooth'});
 const secs=$$('section[id]');
