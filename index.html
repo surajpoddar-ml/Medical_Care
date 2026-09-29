@@ -16,14 +16,14 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="nav" id="navbar">
+<header class="nav" id="navbar" role="banner">
   <div class="container nav-in">
-    <a href="#home" class="brand"><img src="logo.jpg" alt="Prime Hospital logo"><span><b>PRIME HOSPITAL</b><small>प्राइम हस्पिटल</small></span></a>
-    <nav id="menu" aria-label="Main">
+    <a href="#home" class="brand" aria-label="Prime Hospital Home"><img src="logo.jpg" alt="Prime Hospital logo"><span><b>PRIME HOSPITAL</b><small>प्राइम हस्पिटल</small></span></a>
+    <nav id="menu" aria-label="Main Navigation">
       <a href="#home">Home</a><a href="#about">About</a><a href="#departments">Departments</a><a href="#doctors">Doctors</a><a href="#services">Services</a><a href="#appointment">Appointment</a><a href="#emergency">Emergency</a><a href="#support">Support</a><a href="#contact">Contact</a>
     </nav>
     <a href="#appointment" class="btn btn-primary nav-cta">Book Appointment</a>
-    <button id="burger" class="burger" aria-label="Toggle menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+    <button id="burger" class="burger" aria-label="Toggle navigation menu" aria-controls="menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
   </div>
 </header>
 
