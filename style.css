@@ -2,7 +2,7 @@
 :root{--g:#0a8f57;--gd:#0b5a3a;--gx:#06301f;--gl:#eaf6ef;--gray:#5f6b66;--line:#dce8e1;--red:#d93a3a;--r:16px;--sh:0 6px 22px rgba(10,90,58,.10)}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;scroll-padding-top:72px}
-body{font-family:'Segoe UI',system-ui,-apple-system,'Noto Sans Devanagari',Arial,sans-serif;color:var(--gx);line-height:1.6;overflow-x:hidden;background:#fff}
+body{font-family:'Plus Jakarta Sans','Noto Sans Devanagari',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:var(--gx);line-height:1.6;overflow-x:hidden;background:#fff}
 img{max-width:100%;display:block}a{color:inherit;text-decoration:none}
 .container{width:min(1200px,92%);margin-inline:auto}
 .section{padding:84px 0}.alt{background:var(--gl)}
