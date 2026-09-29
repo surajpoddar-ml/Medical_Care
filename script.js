@@ -32,7 +32,7 @@ const secs=$$('section[id]');
 const navObs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)$$('#menu a').forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id))}),{rootMargin:'-45% 0px -50% 0px'});
 secs.forEach(s=>navObs.observe(s));
 
-const rv=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');rv.unobserve(e.target)}}),{threshold:.12});
+const rv=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');rv.unobserve(e.target)}}),{threshold:.08,rootMargin:'0px 0px -40px 0px'});
 $$('.reveal').forEach(el=>rv.observe(el));
 
 const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
