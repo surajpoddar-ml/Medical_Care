@@ -10,7 +10,7 @@ $('#quick').innerHTML=quick.map(q=>`<a href="${q[3]}" class="card"><div class="i
 $('#deptGrid').innerHTML=depts.map(d=>card(d[0],d[1],d[2],'<a class="lnk" href="#doctors">View Department →</a>')).join('');
 $('#svcGrid').innerHTML=svcs.map(s=>card(...s)).join('');
 $('#supGrid').innerHTML=sups.map(s=>card(...s)).join('');
-$('#docGrid').innerHTML=docs.map((d,i)=>`<div class="card doc reveal"><div class="av"><i class="fa-solid fa-user-doctor"></i></div><h3>${d[0]}</h3><p>${d[1]}</p><p><b>${d[2]}</b> experience</p><div class="row"><a href="#contact" class="btn btn-out">View Profile</a><a href="#appointment" class="btn btn-primary" data-doc="${i}">Book</a></div></div>`).join('');
+$('#docGrid').innerHTML=docs.map((d,i)=>`<div class="card doc reveal"><div class="av"><i class="fa-solid fa-user-doctor"></i></div><h3>${d[0]}</h3><p>${d[1]}</p><p><b>${d[2]}</b> experience</p><div class="row"><a href="#contact" class="btn btn-out" aria-label="View doctor profile">View Profile</a><a href="#appointment" class="btn btn-primary" data-doc="${i}" aria-label="Book appointment with ${d[0]}">Book</a></div></div>`).join('');
 $('#fDept').innerHTML+=depts.map(d=>`<option>${d[1]}</option>`).join('');
 $('#fDoc').innerHTML+=docs.map((d,i)=>`<option>${d[0]} (${d[1]}) #${i+1}</option>`).join('');
 $('#fDate').min=new Date().toISOString().split('T')[0];
