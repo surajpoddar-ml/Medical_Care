@@ -13,7 +13,10 @@ $('#supGrid').innerHTML=sups.map(s=>card(...s)).join('');
 $('#docGrid').innerHTML=docs.map((d,i)=>`<div class="card doc reveal"><div class="av"><i class="fa-solid fa-user-doctor"></i></div><h3>${d[0]}</h3><p>${d[1]}</p><p><b>${d[2]}</b> experience</p><div class="row"><a href="#contact" class="btn btn-out" aria-label="View doctor profile">View Profile</a><a href="#appointment" class="btn btn-primary" data-doc="${i}" aria-label="Book appointment with ${d[0]}">Book</a></div></div>`).join('');
 $('#fDept').innerHTML+=depts.map(d=>`<option>${d[1]}</option>`).join('');
 $('#fDoc').innerHTML+=docs.map((d,i)=>`<option>${d[0]} (${d[1]}) #${i+1}</option>`).join('');
-$('#fDate').min=new Date().toISOString().split('T')[0];
+const today=new Date();
+$('#fDate').min=today.toISOString().split('T')[0];
+const maxDate=new Date(today.getTime()+90*24*60*60*1000);
+$('#fDate').max=maxDate.toISOString().split('T')[0];
 
 const slides=$$('.slide'),dots=$('#dots');let cur=0,timer;
 slides.forEach((_,i)=>{const b=document.createElement('button');b.setAttribute('aria-label','Slide '+(i+1));b.onclick=()=>{go(i);auto()};dots.append(b)});
